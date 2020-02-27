@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ursulacervantes/changelog.git"
+  },
+  "dependencies": {
+    "yargs": "^15.1.0"
+  },
+  "name": "changelog",
+  "description": "This library allow us to generate a very neat change log easily, provided we adhere to their conventions on how to write commit messages.",
+  "bugs": {
+    "url": "https://github.com/ursulacervantes/changelog/issues"
+  },
+  "homepage": "https://github.com/ursulacervantes/changelog#readme",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "changelog",
+    "conventional-commits",
+    "semantic-versioning"
+  ],
+  "author": "Ursula Cervantes",
+  "license": "GPL-3.0"
+}
