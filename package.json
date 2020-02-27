@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ursulacervantes/changelog.git"
@@ -15,11 +15,8 @@
   "homepage": "https://github.com/ursulacervantes/changelog#readme",
   "main": "index.js",
   "devDependencies": {},
-  "bin": {
-    "changelog": "node index.js"
-  },
   "scripts": {
-    "changelog": "node index.js"
+    "changelog": "ndex.js"
   },
   "keywords": [
     "changelog",
