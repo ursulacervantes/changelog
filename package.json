@@ -16,10 +16,10 @@
   "main": "index.js",
   "devDependencies": {},
   "bin": {
-    "changelog": "./index.js"
+    "changelog": "node index.js"
   },
   "scripts": {
-    "changelog": "./index.js"
+    "changelog": "node index.js"
   },
   "keywords": [
     "changelog",
