@@ -15,8 +15,11 @@
   "homepage": "https://github.com/ursulacervantes/changelog#readme",
   "main": "index.js",
   "devDependencies": {},
+  "bin": {
+    "changelog": "index.js"
+  },
   "scripts": {
-    "changelog": "ndex.js"
+    "changelog": "node ./index.js"
   },
   "keywords": [
     "changelog",
