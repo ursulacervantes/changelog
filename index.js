@@ -44,4 +44,4 @@ const changelog = () => {
   child.execSync(`git tag -a -m "Tag for version ${newVersion}" v${newVersion}`);
 }
 
-module.exports = changelog;
+changelog();

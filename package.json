@@ -15,8 +15,11 @@
   "homepage": "https://github.com/ursulacervantes/changelog#readme",
   "main": "index.js",
   "devDependencies": {},
+  "bin": {
+    "changelog": "./index.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "changelog": "./index.js"
   },
   "keywords": [
     "changelog",
