@@ -7,7 +7,7 @@
   "dependencies": {
     "yargs": "^15.1.0"
   },
-  "name": "changelog",
+  "name": "keep-up-my-changelog",
   "description": "This library allow us to generate a very neat change log easily, provided we adhere to their conventions on how to write commit messages.",
   "bugs": {
     "url": "https://github.com/ursulacervantes/changelog/issues"
