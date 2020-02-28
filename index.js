@@ -1,11 +1,11 @@
-const child = require("child_process");
-const fs = require("fs");
-const package = require("./package.json");
+var child = require("child_process");
+var fs = require("fs");
+var package = require("./package.json");
 
-const updateVersion = require("./updateVersion");
-const generateNewChangelog = require("./generateNewChangelog");
+var updateVersion = require("./updateVersion");
+var generateNewChangelog = require("./generateNewChangelog");
 
-const changelog = () => {
+var changelog = function() {
   const latestTag = child.execSync('git describe --long').toString('utf-8').split('-')[0];
   const output = child
     .execSync(`git log ${latestTag}..HEAD --format=%B%H----DELIMITER----`)
