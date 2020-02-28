@@ -6,24 +6,24 @@ var updateVersion = require("./updateVersion");
 var generateNewChangelog = require("./generateNewChangelog");
 
 var changelog = function() {
-  const latestTag = child.execSync('git describe --long').toString('utf-8').split('-')[0];
-  const output = child
+  var latestTag = child.execSync('git describe --long').toString('utf-8').split('-')[0];
+  var output = child
     .execSync(`git log ${latestTag}..HEAD --format=%B%H----DELIMITER----`)
     .toString("utf-8");
 
-  const commitsArray = output
+  var commitsArray = output
     .split("----DELIMITER----\n")
     .map(commit => {
-      const [message, sha] = commit.split("\n");
+      var [message, sha] = commit.split("\n");
 
       return { sha, message };
     })
     .filter(commit => Boolean(commit.sha));
 
-  const newVersion = updateVersion( package.version );
+  var newVersion = updateVersion( package.version );
   package.version = String(newVersion);
 
-  const currentChangelog = fs.readFileSync("./CHANGELOG.md", "utf-8");
+  var currentChangelog = fs.readFileSync("./CHANGELOG.md", "utf-8");
   let newChangelog = `# ${newVersion} (${
     new Date().toISOString().split("T")[0]
   })\n\n`;
