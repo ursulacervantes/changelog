@@ -1,11 +1,18 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ursulacervantes/changelog.git"
   },
   "dependencies": {
     "yargs": "^15.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-rc.1",
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/node": "^7.0.0-rc.1",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "nodemon": "^1.18.3"
   },
   "name": "keep-up-my-changelog",
   "description": "This library allow us to generate a very neat change log easily, provided we adhere to their conventions on how to write commit messages.",
@@ -14,9 +21,11 @@
   },
   "homepage": "https://github.com/ursulacervantes/changelog#readme",
   "main": "index.js",
-  "devDependencies": {},
   "bin": {
     "changelog": "lib/index.js"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib"
   },
   "keywords": [
     "changelog",
