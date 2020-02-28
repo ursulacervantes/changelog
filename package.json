@@ -22,10 +22,10 @@
   "homepage": "https://github.com/ursulacervantes/changelog#readme",
   "main": "index.js",
   "bin": {
-    "changelog": "lib/index.js"
+    "changelog": "node bin/index.js"
   },
   "scripts": {
-    "build": "babel src --out-dir lib"
+    "build": "babel src --out-dir bin"
   },
   "keywords": [
     "changelog",

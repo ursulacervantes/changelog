@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
@@ -12,11 +13,11 @@ var child = require("child_process");
 
 var fs = require("fs");
 
-var pkg = require("../package.json");
+var pkg = require("./../package.json");
 
-var updateVersion = require("../utils/updateVersion");
+var updateVersion = require("./utils/updateVersion");
 
-var generateNewChangelog = require("../utils/generateNewChangelog");
+var generateNewChangelog = require("./utils/generateNewChangelog");
 
 var changelog = function changelog() {
   var latestTag = child.execSync('git describe --long').toString('utf-8').split('-')[0];

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const pkg = require("../../package.json");
 
 const features = [];
