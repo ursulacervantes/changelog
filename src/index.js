@@ -1,9 +1,9 @@
 var child = require("child_process");
 var fs = require("fs");
-var package = require("./package.json");
+var package = require("../package.json");
 
-var updateVersion = require("./updateVersion");
-var generateNewChangelog = require("./generateNewChangelog");
+var updateVersion = require("../utils/updateVersion");
+var generateNewChangelog = require("../utils/generateNewChangelog");
 
 var changelog = function() {
   var latestTag = child.execSync('git describe --long').toString('utf-8').split('-')[0];
@@ -34,7 +34,7 @@ var changelog = function() {
   fs.writeFileSync("./CHANGELOG.md", `${newChangelog}${currentChangelog}`);
 
 
-  fs.writeFileSync("./package.json", JSON.stringify(package, null, 2));
+  fs.writeFileSync("../package.json", JSON.stringify(package, null, 2));
 
   // create a new commit
   child.execSync('git add .');
